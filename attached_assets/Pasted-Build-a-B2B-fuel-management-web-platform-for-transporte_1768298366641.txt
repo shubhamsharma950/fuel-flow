@@ -1,0 +1,257 @@
+Build a B2B fuel management web platform for transporters and fleet owners where they can digitally order diesel/petrol for their vehicles, make online payments, and get fuel delivered/authorized at partner fuel pumps.
+
+The platform should work as:
+
+A responsive web application (PWA-ready)
+With multiple user roles
+Manual operations in MVP, scalable to automation later
+
+
+
+
+
+🔹 USER ROLES (VERY IMPORTANT)
+
+
+
+1️⃣ Super Admin (Platform Owner)
+
+
+Full control of the system.
+
+
+2️⃣ Transporter / Fleet Owner (Customer)
+
+
+Uses platform to order fuel and manage vehicles.
+
+
+3️⃣ Driver (Indirect User)
+
+
+Receives fuel at pump using OTP (no login required in MVP).
+
+
+4️⃣ Fuel Pump Partner (Optional – Phase 2)
+
+
+Fuel station that fulfills orders.
+
+
+
+
+🔹 ROLE-WISE FEATURES
+
+
+
+
+
+🧑‍💼 1. SUPER ADMIN PANEL (WEB)
+
+
+
+Dashboard
+
+
+Total users
+Today’s orders
+Pending fuel deliveries
+Revenue & commission summary
+
+
+
+Transporter Management
+
+
+View all transporters
+View vehicles, drivers, fuel usage
+Enable / Disable transporter
+Manual credit limit (future)
+
+
+
+Fuel Order Management
+
+
+View all fuel orders
+Assign fuel pump manually
+Update order status:
+
+Payment received
+Driver contacted
+Pump assigned
+Fuel delivered
+
+Generate delivery OTP
+Upload delivery proof (photo/manual confirmation)
+
+
+
+Fuel Pump Management
+
+
+Add / edit fuel pumps
+Assign brand (HP, BPCL, IOCL, Reliance)
+City-wise mapping
+Set commission per liter
+
+
+
+Payments & Invoices
+
+
+View all payments
+Transaction IDs
+GST invoices (auto/manual)
+Monthly settlement report
+
+
+
+Reports
+
+
+Daily / monthly fuel sales
+Brand-wise fuel distribution
+Transporter-wise consumption
+
+
+
+System Settings
+
+
+Fuel price configuration
+Commission rules
+Support contact
+Terms & privacy pages
+
+
+
+
+
+🚚 2. TRANSPORTER / FLEET OWNER (WEB + MOBILE)
+
+
+
+Authentication
+
+
+Mobile number login
+OTP verification
+No password
+
+
+
+Company Setup (First Time)
+
+
+Company name
+Owner name
+GST number (optional)
+City
+Number of vehicles
+
+
+
+Dashboard
+
+
+Today’s fuel spend
+Monthly fuel spend
+Active vehicles
+Recent fuel orders
+
+
+
+Vehicle Management
+
+
+Add / edit / delete vehicles
+Vehicle number
+Vehicle type
+
+
+
+Driver Management
+
+
+Add drivers
+Driver name & mobile number
+Assign driver to vehicle
+
+
+
+New Fuel Order Flow
+
+
+Select vehicle
+Select driver
+Select fuel brand
+Select fuel type (diesel/petrol)
+Enter amount (₹)
+View estimated liters
+Online payment
+Order confirmation
+
+
+
+Order Tracking
+
+
+Real-time status updates
+Pump details
+OTP for fuel delivery
+Support contact button
+
+
+
+Order History
+
+
+Filter by date / vehicle
+Download invoice
+View fuel consumption history
+
+
+
+Reports
+
+
+Vehicle-wise fuel usage
+Monthly spend report
+Export PDF / Excel
+
+
+
+
+
+👨‍✈️ 3. DRIVER FLOW (NO LOGIN – MVP)
+
+
+Receives SMS / WhatsApp:
+
+Fuel pump name
+Location
+Fuel amount
+OTP
+
+Goes to assigned pump
+Shows OTP
+Fuel is delivered
+
+
+(Driver app can be added later)
+
+
+
+
+🔹 TECHNICAL REQUIREMENTS
+
+
+
+Frontend
+
+
+Responsive web app
+Mobile-first UI
+PWA enabled (Add to Home Screen)
+Clean & simple UX (non-tech users)
