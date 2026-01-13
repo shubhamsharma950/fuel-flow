@@ -1,0 +1,43 @@
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { cn } from "@/lib/utils";
+
+interface StatCardProps {
+  title: string;
+  value: string;
+  description?: string;
+  icon?: React.ElementType;
+  trend?: "up" | "down" | "neutral";
+  trendValue?: string;
+  className?: string;
+}
+
+export function StatCard({ 
+  title, 
+  value, 
+  description, 
+  icon: Icon, 
+  trend,
+  trendValue,
+  className 
+}: StatCardProps) {
+  return (
+    <Card className={cn("overflow-hidden border-l-4 border-l-primary", className)}>
+      <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+        <CardTitle className="text-sm font-medium text-muted-foreground">
+          {title}
+        </CardTitle>
+        {Icon && <Icon className="h-4 w-4 text-muted-foreground" />}
+      </CardHeader>
+      <CardContent>
+        <div className="text-2xl font-bold font-heading">{value}</div>
+        {(description || trendValue) && (
+          <p className="text-xs text-muted-foreground mt-1 flex items-center gap-1">
+            {trend === "up" && <span className="text-green-600 font-medium">↑ {trendValue}</span>}
+            {trend === "down" && <span className="text-red-600 font-medium">↓ {trendValue}</span>}
+            {description}
+          </p>
+        )}
+      </CardContent>
+    </Card>
+  );
+}
